@@ -1,6 +1,7 @@
 {% load static %}
 
-<link href="{% static 'sources/node_modules/dropzone/dist/dropzone.css' %}" media="screen" rel="stylesheet" type="text/css" />
+<link rel="preload" href="{% static 'sources/node_modules/dropzone/dist/dropzone.css' %}" as="style" onload="this.onload=null;this.rel='stylesheet'">
+<noscript><link rel="stylesheet" href="{% static 'sources/node_modules/dropzone/dist/dropzone.css'}"></noscript>
 
 <style>
     .dropzone .dz-preview .dz-details {
